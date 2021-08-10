@@ -24,7 +24,7 @@ if upload_file is not None:
     data = pd.read_csv(upload_file)
     df = pd.DataFrame(data)
 else:
-    data = pd.read_csv("D:/achu/programs/Projects/Streamlit/Data Test - Sheet1.csv")
+    data = pd.read_csv("Data Test - Sheet1.csv")
     df = pd.DataFrame(data)
     # removing the noisy data
     df = df[df.Latitude < 40]
@@ -102,4 +102,4 @@ st.markdown("""
 st.subheader("Use the output csv in [Keplergl](https://kepler.gl/demo) to visualise")
 
 # writing the output dataframe
-output_df.to_csv(r'D:/achu/programs/Projects/Streamlit/output_csv.csv',index=False)
+output_df.to_csv('output_csv.csv',index=False)

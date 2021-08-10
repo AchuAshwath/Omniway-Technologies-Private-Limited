@@ -7,3 +7,4 @@ ipywidgets==7.4.2
 Shapely==1.6.4.post2
 traitlets==4.3.2
 traittypes==0.2.1
+keplergl==0.3.0 

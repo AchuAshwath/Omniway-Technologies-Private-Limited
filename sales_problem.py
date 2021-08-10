@@ -57,7 +57,6 @@ company_names = set(company_names[i] for i in names_index)
 company_name = str(st.selectbox('Company Name',company_names))
 
 target = df.index[df['Company Name'] == company_name].tolist()
-print(target)
 
 # creating a model dataframe for clustering
 model = df.loc[:, ['Pin Code', 'Latitude', 'Longitude']]

@@ -98,7 +98,13 @@ st.write(output_df)
 st.markdown("""
 [Output csv file](https://github.com/AchuAshwath/Omniway-Technologies-Private-Limited/blob/main/output_csv.csv)
 """)
+download=st.button('Download Output CSV File')
+# writing the output dataframe
+csv = output_df.to_csv(r'output_csv.csv',index=False)
+b64 = base64.b64encode(csv.encode()).decode()  # some strings
+linko= f'<a href="data:file/csv;base64,{b64}" download="myfilename.csv">Download csv file</a>'
+st.markdown(linko, unsafe_allow_html=True)
+
 st.subheader("Use the output csv in [Keplergl](https://kepler.gl/demo) to visualise")
 
-# writing the output dataframe
-output_df.to_csv(r'output_csv.csv',index=False)
+

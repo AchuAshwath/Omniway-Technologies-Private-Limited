@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
-import geopandas
-import keplergl
-import keplergl_static
 import seaborn as sns
 
 sns.set()
@@ -105,6 +102,3 @@ st.subheader("Use the output csv in [Keplergl](https://kepler.gl/demo) to visual
 
 # writing the output dataframe
 output_df.to_csv(r'output_csv.csv',index=False)
-
-map_1 = KeplerGl(height=400)
-keplergl_static(map_1)

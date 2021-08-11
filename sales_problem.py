@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
+import base64
 import seaborn as sns
 
 sns.set()

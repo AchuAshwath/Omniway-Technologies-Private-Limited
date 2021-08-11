@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
+import geopandas
 import keplergl
 import keplergl_static
 import seaborn as sns
